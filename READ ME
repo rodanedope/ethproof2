@@ -1,0 +1,31 @@
+//Contract with MyToken
+
+//The fundamental token "dotcoins" with the abbreviation "marvel" is implemented in this straightforward Solidity smart contract. Both creating new tokens and destroying old tokens are permitted per the contract.
+
+//Common variables
+
+//These public variables are specified in the contract:
+
+//• tokenName: This string variable's value is set to "dotcoins" and represents the name of the token.
+//• tokenAbbrv: A string variable with the value "marvel" that represents the abbreviation of the token.
+//The complete supply of the token is represented by the unsigned integer variable totalsupply. It starts out at zero.
+
+//Variable Mapping
+
+//The mapping variable listed below is defined in the contract:
+
+//• balances: A mapping that connects a location with a token balance. It converts unsigned integers (uint) to addresses (address).
+
+//Use of Mint
+
+//The mint function that the contract implements enables the production of fresh tokens. The function requires two inputs: _value, the number of tokens to mint, and _address, the address to which the new tokens should be sent.
+
+//The += operator is used within the function to increase the balance of the _address by _value and to increase the total supply by _value.
+
+//Burning Work
+
+//The burn function, which enables the eradication of existing tokens, is also implemented in the contract. The function requires two inputs: _value, the number of tokens to burn, and _address, the address from which tokens will be burned.
+
+//The balance of the _address is checked within the function to see if it is more than or equal to the _value. The balance of the _address is decreased by _value using the -= operator if the condition is true, and the total supply is decreased by _value using the -= operator.
+
+//Please use it cautiously and think about adding extra capabilities and protections if deploying it for actual usage because the contract does not include any access control or security measures.
